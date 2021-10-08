@@ -1,2 +1,2 @@
 # data_splitter
-Scripts to split the dataset and to collect metrics on the data
+Scripts to split the dataset and to collect metrics on the rg-data
