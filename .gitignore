@@ -131,3 +131,5 @@ dmypy.json
 *.txt
 splits
 .vscode
+parsed
+obj_count.json

@@ -36,15 +36,15 @@ if __name__ == '__main__':
 
     dst_train_folder = output_path / 'train'
     dst_img_train_folder = output_path / 'train' / 'imgs'
-    dst_mask_train_folder = output_path / 'train' / 'masks'
+    dst_mask_train_folder = output_path / 'train' / 'annotations'
 
     dst_val_folder = output_path / 'val'
     dst_img_val_folder = output_path / 'val' / 'imgs'
-    dst_mask_val_folder = output_path / 'val' / 'masks'
+    dst_mask_val_folder = output_path / 'val' / 'annotations'
 
     dst_test_folder = output_path / 'test'
     dst_img_test_folder = output_path / 'test' / 'imgs'
-    dst_mask_test_folder = output_path / 'test' / 'masks'
+    dst_mask_test_folder = output_path / 'test' / 'annotations'
 
     fto = Path('file_to_objs.txt')
 
