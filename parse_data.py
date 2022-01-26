@@ -1,5 +1,6 @@
-from parsers import COCOParser, YOLOParser
-import os, argparse
+from parsers.coco import COCOParser
+from parsers.yolo import YOLOParser
+import argparse
 from pathlib import Path
 from collections import Counter
 
@@ -7,7 +8,7 @@ def main(args):
 
     # parent_dir = Path().resolve().parent
     data_dir = 'splits' / Path(args.data_dir) / Path(args.split)
-    output_dir = 'parsed' / Path(args.data_dir)
+    output_dir = 'parsed' / Path(args.parser) / Path(args.data_dir)
     split_dir = Path(args.split)
 
     output_dir.mkdir(exist_ok=True, parents=True)
@@ -43,7 +44,6 @@ if __name__ == '__main__':
 
     parser.add_argument("-d", "--data_dir", default="MLDataset_cleaned", help="Path of whole dataset directory (should be a sibling directory of the parsers one)")
     parser.add_argument("-m", "--masks", default="trainset.dat", help="Path of file that lists all mask file paths")
-    # parser.add_argument("-o", "--out_dir", default="data/", help="Destination directory for converted data")
     parser.add_argument("-c", "--contrast", default=0.15, help="Contrast value for conversion to PNG")
     parser.add_argument("-p", "--parser", default='coco', help="Type of parser")
     parser.add_argument("-s", "--split", choices=['train', 'val', 'test'], help="Split to parse")

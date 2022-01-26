@@ -1,5 +1,3 @@
-import math
-from PIL import Image 
 from pathlib import Path
 from astropy.io import fits
 import random

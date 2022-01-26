@@ -133,3 +133,4 @@ splits
 .vscode
 parsed
 obj_count.json
+!meerkat_data.txt
